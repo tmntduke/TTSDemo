@@ -7,7 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.tmnt.ttsdemo.MainActivity">
+    tools:context="com.example.tmnt.ttsdemo.MainActivity"
+    android:background="@drawable/back"
+    android:gravity="center">
 
     <EditText
         android:id="@+id/edit"
@@ -16,16 +18,11 @@
 
     <Button
         android:id="@+id/btn1"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit"
         android:text="read" />
 
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edit"
-        android:layout_toRightOf="@+id/btn1"
-        android:text="remenber the sound" />
+
 </RelativeLayout>

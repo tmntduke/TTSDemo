@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
     EditText edit;
     @InjectView(R.id.btn1)
     Button btn1;
-    @InjectView(R.id.btn2)
-    Button btn2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,17 +45,11 @@ public class MainActivity extends AppCompatActivity {
         file = new File("/mnt/sdcard/sound.wav");
     }
 
-    @OnClick({R.id.btn1, R.id.btn2})
+    @OnClick({R.id.btn1})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
                 textToSpeech.speak(edit.getText().toString(), TextToSpeech.QUEUE_ADD, null);
-                break;
-            case R.id.btn2:
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    textToSpeech.synthesizeToFile(edit.getText().toString(), null, file, null);
-                }
-                Toast.makeText(MainActivity.this, "remenber success", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
